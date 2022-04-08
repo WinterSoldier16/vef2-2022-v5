@@ -17,6 +17,7 @@ const signup = async (name: string, username: string, password: string) => {
       },
       body: JSONuserInfo,
     });
+
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

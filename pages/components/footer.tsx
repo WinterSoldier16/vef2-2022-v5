@@ -2,9 +2,11 @@ import Link from 'next/link';
 import styles from '../../styles/footer.module.css';
 
 export default function Footer() {
+  var loggedInToken;
+  var loggedInUser
   if (typeof window !== 'undefined') {
-    const loggedInToken = localStorage.getItem('loggedInToken');
-    const loggedInUser = localStorage.getItem('loggedInUser');
+    loggedInToken = localStorage.getItem('loggedInToken');
+    loggedInUser = localStorage.getItem('loggedInUser');
   }
   
   if (loggedInToken) {
