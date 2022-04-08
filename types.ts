@@ -42,6 +42,12 @@ export interface Registration {
     comment: null | string;
 }
 
+export interface User {
+    id: number;
+    name: string;
+    username: string;
+}
+
 // export interface Welcome {
 //     limit:  number;
 //     offset: number;

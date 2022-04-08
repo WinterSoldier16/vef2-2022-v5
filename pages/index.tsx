@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { render } from 'react-dom'
 import styles from '../styles/Home.module.css'
 import { Item, GetEventsResults, Welcome } from '../types'
+import Footer from './components/footer'
 
 const Home: NextPage<{ events: Item[] }> = ({ events }) => {
   return (
@@ -16,17 +17,21 @@ const Home: NextPage<{ events: Item[] }> = ({ events }) => {
       </Head>
       {events.map((event) => {
         return (
-          <div key={event.id}>
+          <div key={event.id} className="eventList">
             <li key={event.id}>
               <Link href={`/events/${event.id}`}>
                 <a>
                   {event.name}
                 </a>
               </Link>
+              <p>
+                {event.description}
+              </p>
             </li>
           </div>
         );
       })}
+      < Footer/>
     </div>
   )
 }

@@ -1,3 +1,14 @@
 .container {
-    background-color: beige;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.h3 {
+    font-weight: normal;
 }
